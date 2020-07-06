@@ -28,7 +28,7 @@ server:
 spring:
   profiles: dev
   datasource:
-    url : jdbc:mysql://10.10.18.89:23307/sample_db
+    url : jdbc:mysql://10.10.18.89:23307/sample_db&serverTimezone=UTC
     username : seungnyeong.kim
     password : password
     driver-class-name: com.mysql.cj.jdbc.Driver
