@@ -8,6 +8,8 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
 ---
 spring:
   profiles: local
@@ -15,7 +17,6 @@ spring:
     url : jdbc:mysql://10.10.218.13:3306/sampleDB
     username : localsnkim
     password : password
-    driver-class-name: com.mysql.cj.jdbc.Driver
 server:
   port: 8089
 ---
@@ -25,7 +26,6 @@ spring:
     url : jdbc:mysql://10.10.18.89:23307/sample_db?serverTimezone=UTC
     username : seungnyeong.kim
     password : password
-    driver-class-name: com.mysql.cj.jdbc.Driver
 server:
   port: 18089
 ---
@@ -35,6 +35,5 @@ spring:
     url: jdbc:mysql://10.10.218.72:9876/sampleDB
     username: snkim0410
     password: password
-    driver-class-name: com.mysql.cj.jdbc.Driver
 server:
   port: 28089
