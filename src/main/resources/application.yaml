@@ -1,0 +1,46 @@
+spring:
+  profiles:
+    active: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+      use-new-id-generator-mappings: false
+
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+---
+spring:
+  profiles: local
+  datasource:
+    url : jdbc:mysql://localhost:3306/sampleDB
+    username : localsnkim
+    password : password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8089
+---
+spring:
+  profiles: dev
+  datasource:
+    url : jdbc:mysql://10.10.218.72:9876/sampleDB
+    username : snkim0410
+    password : password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 18089
+---
+spring:
+  profiles: prod
+  datasource:
+    url: jdbc:mysql://10.10.218.72:9876/sampleDB
+    username: snkim0410
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 28089
