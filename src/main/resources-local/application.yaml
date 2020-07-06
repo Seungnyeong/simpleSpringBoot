@@ -1,6 +1,6 @@
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+  profiles:
+    active: local
   jpa:
     hibernate:
       ddl-auto: none
@@ -9,7 +9,6 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
-
 ---
 spring:
   profiles: local
